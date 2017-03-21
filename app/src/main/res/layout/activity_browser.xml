@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_browser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jinwoo.android.activitycontrol2.BrowserActivity">
+
+
+    <Button
+        android:text="BACK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:text="GO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGo"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/editText"
+        android:layout_marginLeft="16dp" />
+
+    <EditText
+        android:layout_width="184dp"
+        android:layout_height="42dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnBack"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/btnBack"
+        android:layout_marginLeft="16dp" />
+
+    <WebView
+        android:layout_width="384dp"
+        android:layout_height="451dp"
+        android:elevation="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        android:id="@+id/webView"
+        app:layout_constraintLeft_toLeftOf="@+id/btnBack" />
+</android.support.constraint.ConstraintLayout>
